@@ -19,8 +19,10 @@ import std::io;
 
 fn void main(){
 
+
     raylib::set_target_fps(FPS);
     raylib::init_window(SCREEN_WIDTH , SCREEN_HEIGHT , "Game Of Life in C3: Samip Regmi | SamTime101");
+
 
     foreach (row_index, row : mat)
     {
@@ -45,8 +47,6 @@ fn void main(){
     play = (play == 0) ? 1 : 0;       
 	}
         if (play){
-        for (int k = 0; k < 1; k++)
-        {
             for (int i = 0; i < ROWS; i++)
             {
                 for (int j = 0; j < COLS; j++)
@@ -79,7 +79,6 @@ fn void main(){
                     mat[i][j] = buffer[i][j];
                 }
             }
-        }
         }
         raylib::begin_drawing();
         raylib::clear_background(raylib::RAYWHITE);
